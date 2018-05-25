@@ -10,4 +10,155 @@
   width: 600px;
   height: 600px;
   border: 2px grey dashed;
+  position: relative;
+  box-sizing: border-box;
+  /* background-image: url(../assets/css_animation_exercise_4.png); */
+  background-position: center;
+}
+
+#hero{
+  width: 75px;
+  height: 75px;
+  border: 1px red dashed;
+  background: #f4ecec;
+  border-radius: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top:18px;
+  left: 18px;
+  /* ----------------------------------------- */
+  /* ----Multiple animation step ----- */
+  /* ----------------------------------------- */
+
+  /* -webkit-animation: sliding 20s  ease, step3 5s  ease 10s, finalstep 5s ease 15s;
+  -moz-animation: sliding 20s  ease, step3 5s  ease 10s, finalstep 5s ease 15s;
+  -o-animation: sliding 20s  ease, step3 5s  ease 10s, finalstep 5s ease 15s;
+  animation: sliding 20s  ease, step3 5s  ease 10s, finalstep 5s ease 15s ; */
+
+  /* ----------------------------------------- */
+  /* ----One animation step ----- */
+  /* ----------------------------------------- */
+
+  animation: allstep 20s  ease infinite alternate;
+
+}
+
+/* ----------------------------------------- */
+/* ----Multiple animation keyframes ----- */
+/* ----------------------------------------- */
+
+/* @keyframes sliding {
+  0% {left:18px;}
+  25%{
+      left:498px;
+      top:18px;
+      }
+  50%{
+    top:198px;
+    left:498px;
+  }
+  52.5%{
+    top:198px;
+    left: 268px;
+  }
+
+  62.5%{
+    top:198px;
+    left:268px;
+  }
+  75%{
+    top:202px;
+    left:18px;
+  }
+  100%{
+    top:440px;
+    left:440px;
+
+  }
+}
+@keyframes step3 {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+    border: 1px red dashed;
+  }
+  100% {
+    transform: rotate(90deg);
+    border: 1px #0900BD dashed;
+  }
+
+}
+
+@keyframes finalstep {
+  0% {
+    width: 75px;
+    height: 75px;
+    border: 1px red dashed;
+    background: #f4ecec;
+    border-radius: 0;
+
+  }
+  100% {
+    border: 0 red dashed;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background: radial-gradient( #fbda61,#f76b1c);
+  }
+
+}  */
+
+/* ----------------------------------------- */
+/* ----only animation keyframe ----- */
+/* ----------------------------------------- */
+
+@keyframes allstep {
+  0% {left:18px;}
+  25%{
+      left:498px;
+      top:18px;
+      }
+  50%{
+    top:198px;
+    left:498px;
+    transform: rotate(0);
+  }
+  52.5%{
+    top:198px;
+    left: 268px;
+    transform: rotate(45deg);
+  }
+
+  62.5%{
+    top:198px;
+    left:268px;
+    border: 1px red dashed;
+    transform: rotate(45deg);
+  }
+  75%{
+    top:202px;
+    left:18px;
+    border: 1px blue dashed;
+    transform: rotate(90deg);
+    height: 75px;
+    width: 75px;
+    border-radius: 0;
+    background: #f4ecec;
+    background: radial-gradient( #f4ecec,#f4ecec);
+  }
+  100%{
+    top:440px;
+    left:440px;
+    border: 0 red dashed;
+    transform: rotate(90deg);
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background: radial-gradient( #fbda61,#f76b1c);
+  }
 }
